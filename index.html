@@ -16,6 +16,26 @@
 <link href="css/sign_up.css" rel="stylesheet" type='text/css' media="all" />
 <!-- /css -->
 </head>
+<script type="text/javascript">
+	function signup(e){
+    let username=document.getElementById('username').value;
+    let email=document.getElementById('email').value;
+    let password=document.getElementById('password1').value;
+    console.log(username, email, password);
+    
+    let user ={
+        username: username,
+        email: email,
+        password: password,
+    }
+    
+
+    var json = JSON.stringify(user);
+    localStorage.setItem(username,json);
+    alert('Chúc Mừng bạn đã đăng ký thành công!');
+}
+
+</script>
 
 <body>
 <h1 class="w3ls">Đăng ký đi thoi</h1>
@@ -71,7 +91,5 @@
 </div>
 <p class="copyright w3l"> KO GHI NGUỒN ĐÂU </p>
 
-<link href="/js/sign_up.js" rel="stylesheet">
-<script src="/js/sign_up.js"></script>
 </body>
 </html>
